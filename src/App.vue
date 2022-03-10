@@ -1,12 +1,6 @@
 <template>
-<head>
-    
-    <title id="title"></title>
-    <link rel="icon" href="./favicon.png">
-    
-</head>
 
-<div class="stripe"></div>
+<Stripe />
 
 <div class="hostqueue" id="hostqueue">
 <div id="alert">The host list below isn't up-to-date! Please make sure the Host is correct in the Manager Terminal.</div>
@@ -35,6 +29,7 @@
 </template>
 
 <script>
+import Stripe from './components/Stripe.vue'
 
 const url = "https://legomaniac04.github.io/test/list.json";
 
@@ -129,12 +124,6 @@ img {
   text-align: center;
   box-shadow: #0003 0 5px 10px -5px;
   border-radius: 15px;
-}
-
-.stripe {
-  background: linear-gradient(to right, lightcoral, #ffb74d, yellow, lightgreen, #4fc3f7, #ba68c8);
-  height: 1px;
-  width: 100%;
 }
     
 .divider {
