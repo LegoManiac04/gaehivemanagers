@@ -69,6 +69,7 @@ fetch(url2).then((response)=>{
 <style>
 html {
   background-color: beige;
+  height: 100%;
 }
     
 body {
