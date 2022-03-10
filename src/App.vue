@@ -1,11 +1,4 @@
 <template>
-<head>
-    
-    <title id="title"></title>
-    <link rel="icon" href="./favicon.png">
-    
-</head>
-
 <div class="stripe"></div>
 
 <div class="hostqueue" id="hostqueue">
