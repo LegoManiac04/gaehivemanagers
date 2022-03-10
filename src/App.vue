@@ -83,7 +83,7 @@ html {
 body {
   display: grid;
   justify-items: center;
-  height: 0;
+  height: 100%;
   margin: 0;
 }
     
@@ -95,6 +95,7 @@ img {
   height: 60px;
   width: 60px;
   border-radius: inherit;
+  background-color: beige;
 }
     
 #host, #m0, #m1, #m2, #m3, #m4 {
@@ -129,6 +130,7 @@ img {
   box-shadow: #0003 0 5px 10px -5px;
   border-radius: 15px;
 }
+
 .stripe {
   background: linear-gradient(to right, lightcoral, #ffb74d, yellow, lightgreen, #4fc3f7, #ba68c8);
   height: 1px;
@@ -145,7 +147,6 @@ img {
   padding: 10px;
   border-radius: 15px;
   box-shadow: #0003 0 5px 10px -5px;
-  margin-top: 50px;
   background-color: #f9f9f9;
 }
     
