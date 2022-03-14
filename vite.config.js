@@ -13,3 +13,20 @@ export default {
     }
   }
 }
+
+module.exports = {
+  pages: {
+    index: {
+      entry: "./src/pages/main.js",
+      template: "index.html",
+      title: "Home",
+      chunks: ["chunk-vendors", "chunk-common", "index"],
+    },
+    faq: {
+      entry: "./src/pages/faq/main.js",
+      template: "index.html",
+      title: "Faq",
+      chunks: ["chunk-vendors", "chunk-common", "faq"],
+    }
+  }
+}
