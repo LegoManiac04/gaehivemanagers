@@ -2,12 +2,13 @@
 <div class="stripe"></div>
 
 <div class="hostqueue" id="hostqueue">
-<div id="alert">The host list below isn't up-to-date! Please make sure the Host is correct in the Manager Terminal.</div>
+<div id="alert">Please make sure the Host is correct in the Manager Terminal.</div>
 
 <div class="hostbox">
     <div id="host"></div>
     <div class="divider"></div>
     <div id="m0"></div>
+    <div id="time"></div>
 </div>
 <div class="nextlist">
     <div id="m1"></div>
@@ -24,6 +25,11 @@
 <div id="3"><img src="https://uploads.scratch.mit.edu/get_image/user/71673362_500x500.png"/> <div id="user"><span>chooz-eets</span></div></div>
 <div id="4"><img src="https://uploads.scratch.mit.edu/get_image/user/58864118_500x500.png"/> <div id="user"><span>NebulaOfTheEarth</span></div></div>
 <div id="5"><img src="https://uploads.scratch.mit.edu/get_image/user/59453672_500x500.png"/> <div id="user"><span>hoIographic</span></div></div>
+</div>
+
+<div class="links">
+  <a href="https://scratch.mit.edu/projects/618997313/fullscreen" target="_blank">Manager Terminal</a>
+  <a href="https://scratch.mit.edu/studios/30486213/comments" target="_blank">Manager Discussion</a>
 </div>
 </template>
 
@@ -64,6 +70,17 @@ fetch(url2).then((response)=>{
    };
                 
 })
+
+const url3 = "https://legomaniac04.github.io/test/time.json";
+// sending request
+fetch(url3).then((response)=>{
+  return response.json();  // converting byte data to json
+}).then(data=>{
+   const {date} = data;
+
+   document.getElementById("time").innerHTML = "Updated " + date;
+
+})
 </script>
 
 <style>
@@ -73,8 +90,8 @@ html {
 }
     
 body {
-  display: grid;
-  justify-items: center;
+  display: flex;
+  justify-content: space-around;
   height: 100%;
   margin: 0;
 }
@@ -115,18 +132,25 @@ img {
 #alert {
   display: none;
   background-color: coral;
-  width: fit-content;
   padding: 10px;
-  height: fit-content;
   text-align: center;
   box-shadow: #0003 0 5px 10px -5px;
   border-radius: 15px;
 }
 
+#time {
+  font-family: monospace;
+  position: absolute;
+  align-self: end;
+  right: 30px;
+  font-size: x-small;
+}
+  
 .stripe {
   background: linear-gradient(to right, lightcoral, #ffb74d, yellow, lightgreen, #4fc3f7, #ba68c8);
   height: 1px;
   width: 100%;
+  position: absolute;
 }
     
 .divider {
@@ -145,6 +169,17 @@ img {
 .hostqueue {
   transform: scale(0);
   transition: transform 0.5s;
+  align-self: center;
+
+}
+
+.links {
+  align-self: center;
+  display: grid;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: #0003 0 5px 10px -5px;
+  background-color: #f9f9f9;
 }
     
 </style>
