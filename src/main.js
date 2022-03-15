@@ -1,15 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import Faq from './pages/faq/App.vue'
+import { routes } from './routes.js'
+import { createRouter, createWebHistory } from 'vue-router'
 
-const Link = window.location.pathname.slice(1)
+const app = createApp(App)
 
-if ( window.location.pathname == "/" ) {
-  const app = createApp(App)
-  app.mount('body')
-}
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+})
 
-if ( window.location.pathname !== "/" ) {
-  const app = createApp(Faq)
-  app.mount('body')
-}
+app.use(router)
+
+app.mount('body')
