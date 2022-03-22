@@ -6,7 +6,7 @@
 
 <div class="hostbox">
     <div id="host"></div>
-    <div class="divider"></div>
+    <div class="divider" style="width: 1px;margin: 10px;"></div>
     <div id="m0"></div>
     <div id="time"></div>
 </div>
@@ -29,19 +29,34 @@
 
 <div class="links">
   <a href="https://scratch.mit.edu/projects/618997313/fullscreen" target="_blank">Manager Terminal</a>
+
+  <div class="divider" style="height: 1px;margin: 10px;"></div>
+  
   <a href="https://scratch.mit.edu/studios/30486213/comments" target="_blank">Manager Discussion</a>
+  <div id="latest-man"></div>
+
+  <div class="divider" style="height: 1px;margin: 10px;"></div>
+  
+<a href="https://scratch.mit.edu/studios/30486215/comments" target="_blank">Curator Discussion</a>
+  <div id="latest-cur"></div>
+  
+  <div class="divider" style="height: 1px;margin: 10px;"></div>
+  
+  <router-link to="/faq">FAQ</router-link>
 </div>
 </template>
 
 <script>
-const url = "https://legomaniac04.github.io/test/list.json";
-// sending request
-fetch(url).then((response)=>{
-  return response.json();  // converting byte data to json
+const url1 = "https://legomaniac04.github.io/ghm-storage/list.json";
+const url2 = "https://legomaniac04.github.io/ghm-storage/managers.json";
+const url3 = "https://legomaniac04.github.io/ghm-storage/time.json";
+const url4 = "https://legomaniac04.github.io/ghm-storage/latestman.json";
+const url5 = "https://legomaniac04.github.io/ghm-storage/latestcur.json";
+
+fetch(url1).then((response)=>{
+  return response.json();
 }).then(data=>{
    const {value} = data[1];
-    
-   document.getElementById("title").innerHTML = "Gaehive Manager Portal";
     
    document.getElementById("m0").innerHTML = document.getElementById(value.charAt(0)).innerHTML;
    document.getElementById("m1").innerHTML = document.getElementById(value.charAt(1)).innerHTML;
@@ -53,15 +68,11 @@ fetch(url).then((response)=>{
    document.getElementById("host").lastElementChild.innerHTML = document.getElementById("host").lastElementChild.innerHTML + "<span style='font-family: monospace;'>Host</span>"
     
    document.getElementById("m0").lastElementChild.innerHTML = document.getElementById("m0").lastElementChild.innerHTML + "<span style='font-family: monospace;'>Next Host</span>"
-    
-   document.getElementById('hostqueue').style.transform = "scale(1)";
-                
+                    
 })
     
-const url2 = "https://legomaniac04.github.io/test/managers.json";
-// sending request
 fetch(url2).then((response)=>{
-  return response.json();  // converting byte data to json
+  return response.json();
 }).then(data=>{
    const {username} = data[0];
     
@@ -71,47 +82,70 @@ fetch(url2).then((response)=>{
                 
 })
 
-const url3 = "https://legomaniac04.github.io/test/time.json";
-// sending request
 fetch(url3).then((response)=>{
-  return response.json();  // converting byte data to json
+  return response.json();
 }).then(data=>{
    const {date} = data;
 
    document.getElementById("time").innerHTML = "Updated " + date;
 
 })
+
+fetch(url4).then((response)=>{
+  return response.json();
+}).then(data=>{
+   const {datetime_created} = data[0];
+    
+   const splitdate = datetime_created.slice(0, -14).split("-")
+    
+   document.getElementById("latest-man").innerHTML = "Latest Thread: " + splitdate[1] + "." + splitdate[2] + "." +  splitdate[0]
+                
+})
+
+fetch(url5).then((response)=>{
+  return response.json();
+}).then(data=>{
+   const {datetime_created} = data[0];
+    
+   const splitdate = datetime_created.slice(0, -14).split("-")
+    
+   document.getElementById("latest-cur").innerHTML = "Latest Thread: " + splitdate[1] + "." + splitdate[2] + "." +  splitdate[0]
+                
+})
 </script>
 
 <style>
 html {
-  background-color: beige;
+  background-color: #efebe9;
   height: 100%;
 }
     
 body {
-  display: flex;
-  justify-content: space-around;
   height: 100%;
+  align-items: center;
+  display: grid;
+  grid-template-areas:
+    'menu main right';
   margin: 0;
-}
-    
-.list {
-  display: none;
 }
     
 img {
   height: 60px;
   width: 60px;
   border-radius: inherit;
-  background-color: beige;
+  background-color: #efebe9;
+}
+
+a {
+  color: #fbc02d;
+  text-decoration: none;
 }
     
 #host, #m0, #m1, #m2, #m3, #m4 {
   margin: 10px;
   background-color: #f9f9f9;
   font-family: Arial, Helvetica, sans-serif;
-  color: #444;
+  color: #34495e;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -139,27 +173,34 @@ img {
 }
 
 #time {
+  color: #34495e;
   font-family: monospace;
   position: absolute;
   align-self: end;
   right: 30px;
   font-size: x-small;
 }
+
+.list {
+  display: none;
+}
   
 .stripe {
-  background: linear-gradient(to right, lightcoral, #ffb74d, yellow, lightgreen, #4fc3f7, #ba68c8);
-  height: 1px;
-  width: 100%;
-  position: absolute;
+  grid-area: menu;
+  background: linear-gradient(to bottom, #ef5350, #ffb74d, #fdd835, #9ccc65, #4fc3f7, #ba68c8);
+  height: 90%;
+  width: 10px;
+  border-radius: 20px;
+  margin-left: 20px;
 }
     
 .divider {
-  border: #9c9 dashed 1px;
-  margin: 10px;
+  background-color: #efebe9;
 }
     
 .hostbox {
   display: flex;
+  position: relative;
   padding: 10px;
   border-radius: 15px;
   box-shadow: #0003 0 5px 10px -5px;
@@ -167,13 +208,16 @@ img {
 }
     
 .hostqueue {
-  transform: scale(0);
-  transition: transform 0.5s;
-  align-self: center;
-
+  grid-area: main;
+  width: fit-content;
 }
 
 .links {
+  grid-area: right;
+  width: fit-content;
+  font-family: monospace;
+  font-weight: bold;
+  color: #34495e;
   align-self: center;
   display: grid;
   padding: 10px;
