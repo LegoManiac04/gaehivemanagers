@@ -1,0 +1,175 @@
+
+html {
+    background-color: #efebe9;
+    height: 100%;
+  }
+      
+  body {
+    height: 100%;
+    align-items: center;
+    display: grid;
+    grid-template-areas:
+      'menu main pane';
+    margin: 0;
+  }
+      
+  img {
+    height: 60px;
+    width: 60px;
+    border-radius: inherit;
+    background-color: #efebe9;
+  }
+  
+  a {
+    color: #fbc02d;
+    text-decoration: none;
+    &:hover {
+      color: #fb592d;
+    }
+  }
+      
+  #host, #m0, #m1, #m2, #m3, #m4 {
+    margin: 10px;
+    background-color: #f9f9f9;
+    font-family: 'Montserrat', sans-serif;
+    color: #34495e;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: #0003 0 5px 10px -5px;
+    a {
+      color: #34495e;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #fbc02d;
+    }
+  }
+      
+  #host, #m0 {
+    box-shadow: none;
+  }
+  
+  #host-notice {
+    font-family: 'Marck Script', cursive;
+    color: #cf7d5a;
+  }
+      
+  #user {
+    display: grid;
+    margin-left: 10px;
+  }
+      
+  #alert {
+    display: none;
+    background-color: coral;
+    padding: 10px;
+    text-align: center;
+    box-shadow: #0003 0 5px 10px -5px;
+    border-radius: 15px;
+  }
+  
+  #dot {
+    display: none;
+    color: white;
+    background-color: salmon;
+    border: 2px solid darkorange;
+    border-radius: 20px;
+    box-shadow: #0003 0 5px 10px -5px;
+    position: absolute;
+    justify-self: center;
+    padding: 5px 40px;
+    top: 25px;
+  }
+  
+  .list {
+    display: none;
+  }
+    
+  .stripe {
+    grid-area: menu;
+    background: linear-gradient(to bottom, #ef5350, #ffb74d, #fdd835, #9ccc65, #4fc3f7, #ba68c8);
+    height: 90%;
+    width: 10px;
+    border-radius: 20px;
+    margin-left: 20px;
+  }
+      
+  .divider {
+    background-color: #efebe9;
+  }
+  
+  .notif {
+    display: none;
+    width: 8px;
+    height: 8px;
+    background-color: #1470ff;
+    border-radius: 10px;
+  }
+      
+  .hostbox {
+    display: flex;
+    position: relative;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: #0003 0 5px 10px -5px;
+    background-color: #f9f9f9;
+  }
+      
+  .hostqueue {
+    grid-area: main;
+    width: fit-content;
+  }
+  
+  .pane {
+    width: 210px;
+    display: grid;
+    grid-gap: 30px;
+    grid-area: pane;
+    grid-template-areas:
+      'reminders'
+      'links';
+  }
+  
+  .links {
+    grid-area: links;
+  }
+  
+  .reminders {
+    grid-area: reminders;
+  }
+  
+  .other-page {
+    grid-area: main;
+  }
+  
+  .nf-page {
+    grid-area: main;
+    justify-content: center;
+    background: none !important;
+    box-shadow: none !important;
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+  
+  .links, .reminders, .other-page, .nf-page {
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: bold;
+    font-size: small;
+    color: #34495e;
+    align-self: center;
+    display: grid;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: #0003 0 5px 10px -5px;
+    background-color: #f9f9f9;
+  }
+  
+  .title {
+    color: #fbc02d;
+  }
+  
