@@ -63,7 +63,8 @@ const url3 = "https://proxy.jupitersleo.repl.co/api.scratch.mit.edu/studios/3048
 const url4 = "https://proxy.jupitersleo.repl.co/api.scratch.mit.edu/studios/30486215/comments?limit=1";
 
 const d = new Date();
-let day = d.getDay(); 
+let day = d.getDay();
+let date = d.getDate(); 
 export default {
   data() {
     return {
@@ -108,7 +109,7 @@ fetch(url3).then((response)=>{
     
    document.getElementById("latest-man").innerHTML = "Latest Thread: " + splitdate[1] + "." + splitdate[2] + "." +  splitdate[0];
 
-   if (splitdate[2] = day) {
+   if (splitdate[2] == date) {
      document.getElementById("mnotif").style.display = "inline-grid"
    }
                 
@@ -123,7 +124,7 @@ fetch(url4).then((response)=>{
     
    document.getElementById("latest-cur").innerHTML = "Latest Thread: " + splitdate[1] + "." + splitdate[2] + "." +  splitdate[0];
 
-   if (splitdate[2] = day) {
+   if (splitdate[2] == date) {
      document.getElementById("cnotif").style.display = "inline-grid"
    }
                 
