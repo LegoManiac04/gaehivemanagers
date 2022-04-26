@@ -48,6 +48,10 @@
   
     <a href="https://scratch.mit.edu/studios/30486215/comments" target="_blank">Curator Discussion <div class="notif" id="cnotif"></div></a>
     <div id="latest-cur"></div>
+
+    <div class="divider" style="height: 1px;margin: 10px;"></div>
+
+    <router-link to="/templates">Templates</router-link>
   
     <div class="divider" style="height: 1px;margin: 10px;"></div>
 
