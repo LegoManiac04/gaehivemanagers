@@ -61,10 +61,10 @@
 </template>
 
 <script>
-const url1 = "https://proxy.jupitersleo.repl.co/clouddata.scratch.mit.edu/logs?projectid=618997313&limit=2&offset=0";
-const url2 = "https://proxy.jupitersleo.repl.co/api.scratch.mit.edu/studios/5842709/managers?limit=1";
-const url3 = "https://proxy.jupitersleo.repl.co/api.scratch.mit.edu/studios/30486213/comments?limit=1";
-const url4 = "https://proxy.jupitersleo.repl.co/api.scratch.mit.edu/studios/30486215/comments?limit=1";
+const url1 = "https://proxy.jupitersleo.repl.co:443/clouddata.scratch.mit.edu/logs?projectid=618997313&limit=2&offset=0";
+const url2 = "https://proxy.jupitersleo.repl.co:443/api.scratch.mit.edu/studios/5842709/managers?limit=1";
+const url3 = "https://proxy.jupitersleo.repl.co:443/api.scratch.mit.edu/studios/30486213/comments?limit=1";
+const url4 = "https://proxy.jupitersleo.repl.co:443/api.scratch.mit.edu/studios/30486215/comments?limit=1";
 
 const d = new Date();
 let day = d.getDay();
