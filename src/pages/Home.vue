@@ -113,7 +113,7 @@ fetch(url3).then((response)=>{
     
    document.getElementById("latest-man").innerHTML = "Latest Thread: " + splitdate[1] + "." + splitdate[2] + "." +  splitdate[0];
 
-   if (splitdate[2] == date) {
+   if (splitdate[2] >= date) {
      document.getElementById("mnotif").style.display = "inline-grid"
    }
                 
@@ -128,7 +128,7 @@ fetch(url4).then((response)=>{
     
    document.getElementById("latest-cur").innerHTML = "Latest Thread: " + splitdate[1] + "." + splitdate[2] + "." +  splitdate[0];
 
-   if (splitdate[2] == date) {
+   if (splitdate[2] >= date) {
      document.getElementById("cnotif").style.display = "inline-grid"
    }
                 
