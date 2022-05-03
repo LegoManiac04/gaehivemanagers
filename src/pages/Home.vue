@@ -15,16 +15,24 @@
     <div id="m2"></div>
     <div id="m3"></div>
     <div id="m4"></div>
+    <div id="m5"></div>
 </div>
 </div>
 
-<div class="list">
-<div id="0"><img src="https://uploads.scratch.mit.edu/get_image/user/27265189_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/DogCatPuppyLover/" target="_blank">DogCatPuppyLover</a></div></div>
-<div id="1"><img src="https://uploads.scratch.mit.edu/get_image/user/20555709_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/cutefruit/" target="_blank">cutefruit</a></div></div>
-<div id="2"><img src="https://uploads.scratch.mit.edu/get_image/user/21629747_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/LegoManiac04/" target="_blank">LegoManiac04</a></div></div>
-<div id="3"><img src="https://uploads.scratch.mit.edu/get_image/user/71673362_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/chooz-eets/" target="_blank">chooz-eets</a></div></div>
-<div id="4"><img src="https://uploads.scratch.mit.edu/get_image/user/58864118_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/NebulaOfTheEarth/" target="_blank">NebulaOfTheEarth</a></div></div>
-<div id="5"><img src="https://uploads.scratch.mit.edu/get_image/user/59453672_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/hoIographic/" target="_blank">hoIographic</a></div></div>
+<div id="list">
+  <div id="0"><img src="https://uploads.scratch.mit.edu/get_image/user/27265189_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/DogCatPuppyLover/" target="_blank">DogCatPuppyLover</a></div></div>
+  
+  <div id="1"><img src="https://uploads.scratch.mit.edu/get_image/user/20555709_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/cutefruit/" target="_blank">cutefruit</a></div></div>
+  
+  <div id="2"><img src="https://uploads.scratch.mit.edu/get_image/user/21629747_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/LegoManiac04/" target="_blank">LegoManiac04</a><div id="lm-on"></div></div></div>
+  
+  <div id="3"><img src="https://uploads.scratch.mit.edu/get_image/user/71673362_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/chooz-eets/" target="_blank">chooz-eets</a></div></div>
+  
+  <div id="4"><img src="https://uploads.scratch.mit.edu/get_image/user/81076538_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/shiny--/" target="_blank">shiny--</a></div></div>
+  
+  <div id="5"><img src="https://uploads.scratch.mit.edu/get_image/user/45833894_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/Moonwatcher127/" target="_blank">Moonwatcher127</a></div></div>
+
+  <div id="6"><img src="https://uploads.scratch.mit.edu/get_image/user/91756959_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/biohazard--/" target="_blank">biohazard--</a></div></div>
 </div>
 
 <div class="pane">
@@ -87,7 +95,8 @@ fetch(url1).then((response)=>{
    document.getElementById("m2").innerHTML = document.getElementById(value.charAt(2)).innerHTML;
    document.getElementById("m3").innerHTML = document.getElementById(value.charAt(3)).innerHTML;
    document.getElementById("m4").innerHTML = document.getElementById(value.charAt(4)).innerHTML;
-   document.getElementById("host").innerHTML = document.getElementById(value.charAt(5)).innerHTML;
+   document.getElementById("m5").innerHTML = document.getElementById(value.charAt(5)).innerHTML;
+   document.getElementById("host").innerHTML = document.getElementById(value.charAt(6)).innerHTML;
     
    document.getElementById("host").lastElementChild.innerHTML = document.getElementById("host").lastElementChild.innerHTML + "<span id='host-notice'>Host</span>"
     
