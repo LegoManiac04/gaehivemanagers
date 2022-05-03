@@ -19,7 +19,7 @@
 </div>
 </div>
 
-<div id="list">
+<div class="list">
   <div id="0"><img src="https://uploads.scratch.mit.edu/get_image/user/27265189_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/DogCatPuppyLover/" target="_blank">DogCatPuppyLover</a></div></div>
   
   <div id="1"><img src="https://uploads.scratch.mit.edu/get_image/user/20555709_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/cutefruit/" target="_blank">cutefruit</a></div></div>
