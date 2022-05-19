@@ -27,12 +27,10 @@
   <div id="2"><img src="https://uploads.scratch.mit.edu/get_image/user/21629747_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/LegoManiac04/" target="_blank">LegoManiac04</a><div id="lm-on"></div></div></div>
   
   <div id="3"><img src="https://uploads.scratch.mit.edu/get_image/user/71673362_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/chooz-eets/" target="_blank">chooz-eets</a></div></div>
-  
-  <div id="4"><img src="https://uploads.scratch.mit.edu/get_image/user/81076538_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/shiny--/" target="_blank">shiny--</a></div></div>
-  
-  <div id="5"><img src="https://uploads.scratch.mit.edu/get_image/user/45833894_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/Moonwatcher127/" target="_blank">Moonwatcher127</a></div></div>
 
-  <div id="6"><img src="https://uploads.scratch.mit.edu/get_image/user/91756959_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/biohazard--/" target="_blank">biohazard--</a></div></div>
+  <div id="4"><img src="https://uploads.scratch.mit.edu/get_image/user/45833894_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/Moonwatcher127/" target="_blank">Moonwatcher127</a></div></div>
+
+  <div id="5"><img src="https://uploads.scratch.mit.edu/get_image/user/91756959_500x500.png"/> <div id="user"><a href="https://scratch.mit.edu/users/biohazard--/" target="_blank">biohazard--</a></div></div>
 </div>
 
 <div class="pane">
