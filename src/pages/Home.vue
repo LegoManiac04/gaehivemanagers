@@ -92,8 +92,7 @@ fetch(url1).then((response)=>{
    document.getElementById("m2").innerHTML = document.getElementById(value.charAt(2)).innerHTML;
    document.getElementById("m3").innerHTML = document.getElementById(value.charAt(3)).innerHTML;
    document.getElementById("m4").innerHTML = document.getElementById(value.charAt(4)).innerHTML;
-   document.getElementById("m5").innerHTML = document.getElementById(value.charAt(5)).innerHTML;
-   document.getElementById("host").innerHTML = document.getElementById(value.charAt(6)).innerHTML;
+   document.getElementById("host").innerHTML = document.getElementById(value.charAt(5)).innerHTML;
     
    document.getElementById("host").lastElementChild.innerHTML = document.getElementById("host").lastElementChild.innerHTML + "<span id='host-notice'>Host</span>"
     
