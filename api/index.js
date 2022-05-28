@@ -1,8 +1,6 @@
 const app = require('express')();
 
 app.get('/api', (req, res) => {
-
-app.get('/api', (req, res) => {
   res.send(`
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <h1>Test</h1>
