@@ -1,7 +1,7 @@
 const app = require('express')();
 const jwt = require('jsonwebtoken')();
 const cookieParser = require('cookie-parser')();
-const fetch = require('node-fetch');
+const fetch = require('node-fetch')();
 
 // The /auth route
 app.get('/api/login', async (req, res) => {
