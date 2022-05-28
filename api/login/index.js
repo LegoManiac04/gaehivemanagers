@@ -3,6 +3,18 @@ const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const fetch = require('node-fetch');
 
+app.use(cookieParser());
+
+// Our default cookie options
+const cookieOptions = {
+    path: '/',                // Send the cookie to all routes
+    httpOnly: true,           // Make the cookie not accessible by document.cookie
+    sameSite: 'lax',          // Allow incoming links (but not requests) to include the cookie
+    secure: true,             // Make sure the cookie is secure
+    maxAge: 20 * 24 * 3600 * 1000  // The cookie expires in 20 days
+  };
+  
+
 // The /auth route
 app.get('/api/login', async (req, res) => {
     let data;
