@@ -1,10 +1,10 @@
-const express = require('express');
+const app = require('express')();
 
-const app = express();
+app.get('/api', (req, res) => {
 
 app.use(express.static(__dirname + './src/styles'));
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send(`
     <link rel="stylesheet" type="text/css" href="style.css" />
     <h1>Tes</h1>
