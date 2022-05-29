@@ -1,6 +1,8 @@
-
 html {
-  background-color: #efebe9;
+  background-color: antiquewhite;
+  background-image: url("/bg.svg");
+  background-size: cover;
+  background-position: bottom;
   height: 100%;
 }
     
@@ -9,14 +11,15 @@ body {
   align-items: center;
   display: grid;
   grid-template-areas:
-    'menu main pane';
+    'menu main'
+    'pane pane';
   margin: 0;
 }
     
 img {
   height: 50px;
   width: 50px;
-  border-radius: inherit;
+  border-radius: 100%;
   background-color: #efebe9;
 }
 
@@ -40,18 +43,33 @@ textarea {
   font-family: 'Montserrat', sans-serif;
   font-size: inherit;
 }
+
+.indi {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  position: absolute;
+  align-self: flex-end;
+  margin: -4px;
+  border: 3px solid #fffc;
+  background-color: gray;
+}
+
+.user-icon {
+  display: grid;
+}
     
 #host, #m0, #m1, #m2, #m3, #m4, #m5 {
-  margin: 10px;
-  background-color: #f9f9f9;
+  margin: 2px 5px;
+  background-color: #fffc;
   font-family: 'Montserrat', sans-serif;
   color: #34495e;
   font-weight: bold;
   display: flex;
   align-items: center;
   padding: 10px;
-  border-radius: 15px;
-  box-shadow: #0003 0 5px 10px -5px;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
   a {
     color: #34495e;
     text-decoration: none;
@@ -63,6 +81,19 @@ textarea {
     
 #host, #m0 {
   box-shadow: none;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  display: grid;
+  justify-items: center;
+}
+
+#m1 {
+  border-radius: 10px 50px 10px 10px;
+}
+
+#m5 {
+  border-radius: 10px 10px 50px 10px;
 }
 
 #host-notice {
@@ -72,7 +103,7 @@ textarea {
     
 #user {
   display: grid;
-  margin-left: 10px;
+  margin: 10px;
 }
 
 #dot {
@@ -89,8 +120,16 @@ textarea {
   top: 25px;
 }
 
-.list {
+#list {
   display: none;
+}
+
+.icons {
+  height: 30px !important;
+  width: 30px !important;
+  border-radius: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
   
 .stripe {
@@ -113,33 +152,70 @@ textarea {
   background-color: #1470ff;
   border-radius: 10px;
 }
+
+.button {
+  display: grid;
+}
     
 .hostbox {
-  display: flex;
+  img {
+    width: 65px;
+    height: 65px;
+  }
+  #user {
+    margin-bottom: 0;
+  }
+  .indi {
+    height: 20px;
+    width: 20px;
+    border: 4px solid #fffc;
+  }
+  .crown {
+    border-radius: 0;
+    background: none;
+    width: 40px;
+    height: auto;
+}
+  display: grid;
   position: relative;
-  padding: 10px;
-  border-radius: 15px;
-  box-shadow: #0003 0 5px 10px -5px;
-  background-color: #f9f9f9;
+  align-content: center;
+  border: 1px solid #e8e8e8;
+  border-radius: 50px 10px 10px 50px;
+  background-color: #fffc;
+  overflow: hidden;
+}
+
+.nextlist {
+  margin-top: -2px;
+  margin-bottom: -2px;
+  display: grid;
 }
     
 .hostqueue {
   grid-area: main;
-  width: fit-content;
+  display: flex;
 }
 
 .pane {
-  width: 210px;
   display: grid;
   grid-gap: 30px;
   grid-area: pane;
   grid-template-areas:
-    'reminders'
     'links';
 }
 
 .links {
   grid-area: links;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;;
+  font-weight: bold;
+  font-size: small;
+  color: #34495e;
+  justify-self: center;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: #0003 0 5px 10px -5px;
+  background-color: #f9f9f9;
 }
 
 .reminders {
@@ -164,19 +240,41 @@ textarea {
   }
 }
 
-.links, .reminders, .other-page, .nf-page {
+.reminders, .other-page, .nf-page {
   font-family: 'Montserrat', sans-serif;;
   font-weight: bold;
   font-size: small;
   color: #34495e;
-  align-self: center;
+  justify-self: center;
   display: grid;
+  position: absolute;
+  z-index: 1;
   padding: 10px;
   border-radius: 15px;
   box-shadow: #0003 0 5px 10px -5px;
   background-color: #f9f9f9;
 }
 
+.pop-up-bg {
+  position: absolute;
+  background-color: #3337;
+  width: 100vw;
+  height: 100vh;
+  align-self: center;
+  justify-self: center;
+  z-index: 1;
+}
+
 .title {
   color: #fbc02d;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
