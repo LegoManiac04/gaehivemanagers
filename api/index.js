@@ -5,8 +5,10 @@ app.get('/api', (req, res) => {
     <style lang="scss">
       @import "../styles.scss";
     </style>
-    <h1>Test</h1>
-    <p>Head to <a href="/login" target="_blank">/login</a> to get started.</p>
+    <div class="other-page">
+      h1>Test</h1>
+      <p>Head to <a href="/api/login" target="_blank">/api/login</a> to get started.</p>
+    </div>
   `);
 });
 
